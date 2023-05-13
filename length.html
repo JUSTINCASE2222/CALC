@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="mbl.css">
+  <title>Length Measurer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #111;
+      color: #fff;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin: 20px 0;
+    }
+
+    label {
+      font-size: 24px;
+    }
+
+    input[type="number"] {
+      font-size: 24px;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    button {
+      background-color: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      border: none;
+      padding: 15px 30px;
+      font-size: 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #fff;
+      color: #333;
+      border: 2px solid #333;
+    }
+
+    p {
+      font-size: 24px;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Length Measurer</h1>
+  <form>
+    <label for="inputLength">Enter the feet:</label>
+    <br>
+    <input type="number" id="inputLength" name="inputLength" required>
+    <br>
+    <button type="button" onclick="convertToInches()">Convert to Inches</button>
+    <button type="button" onclick="convertToFeet()">Convert to Feet</button>
+    <button type="button" onclick="convertToYards()">Convert to Yards</button>
+  </form>
+  <p id="result"></p>
+  <script>
+    function convertToInches() {
+      const length = document.getElementById('inputLength').value;
+      const inches = length * 12;
+      document.getElementById('result').innerHTML = `${length} feet is ${inches} inches.`;
+    }
+
+    function convertToFeet() {
+      const length = document.getElementById('inputLength').value;
+      const feet = length;
+      document.getElementById('result').innerHTML = `${length} feet is ${feet} feet.`;
+    }
+
+    function convertToYards() {
+      const length = document.getElementById('inputLength').value;
+      const yards = length / 3;
+      document.getElementById('result').innerHTML = `${length} feet is ${yards} yards.`;
+    }
+  </script>
+</body>
+</html>

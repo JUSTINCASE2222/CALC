@@ -1,0 +1,19 @@
+/* Mobile Viewport of bday. */
+@media screen and (max-width: 480px) {
+  /* font size */
+  label, input, button {
+    font-size: 16px;
+  }
+  
+  /* stack the form inputs vertically */
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* adjust the spacing between the form inputs */
+  input {
+    margin-bottom: 10px;
+  }
+}
